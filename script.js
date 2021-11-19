@@ -5,13 +5,18 @@ const app = new Vue({
     data: {
         mail: [],
     },
+    
 
     created() {
         this.GenMail();
     },
 
     computed: {
+        printOk(){
+            return (this.mail.length === 10) ? true : false;
+        }
     },
+
     methods:{
         GenMail(){
             for(let i = 0; i < 10; i++){
@@ -22,6 +27,5 @@ const app = new Vue({
                 })
             }
         },
-        
     }
 })
